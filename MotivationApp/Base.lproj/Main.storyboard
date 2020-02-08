@@ -15,12 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUOTE HERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuf-9L-nbV">
-                                <rect key="frame" x="20" y="104" width="374" height="107"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESS A BUTTON" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuf-9L-nbV">
+                                <rect key="frame" x="20" y="104" width="374" height="173"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="iuf-9L-nbV" secondAttribute="height" multiplier="374:107" id="zXl-ig-tj7"/>
+                                    <constraint firstAttribute="width" secondItem="iuf-9L-nbV" secondAttribute="height" multiplier="374:107" constant="-230.69158878504675" id="zXl-ig-tj7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -35,6 +35,9 @@
                                 <state key="normal" title="Inspiration">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="inspirationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2PR-XS-DGm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLn-Z6-R1p">
                                 <rect key="frame" x="20" y="387" width="374" height="64"/>
@@ -47,6 +50,9 @@
                                 <state key="normal" title="Motivation">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="motivationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vP0-bZ-cQP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMs-87-5f3">
                                 <rect key="frame" x="20" y="459" width="374" height="64"/>
@@ -59,6 +65,9 @@
                                 <state key="normal" title="Life">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="lifeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jmD-ix-aWP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nft-OO-ycn">
                                 <rect key="frame" x="20" y="531" width="374" height="64"/>
@@ -71,6 +80,9 @@
                                 <state key="normal" title="Friendship">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="FriendshipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Pm-fy-Gyk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,10 +101,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WwK-4K-Nuk" secondAttribute="trailing" constant="20" id="kxX-Mr-4Lw"/>
                             <constraint firstItem="iMs-87-5f3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qd8-tF-7lY"/>
                             <constraint firstItem="WwK-4K-Nuk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yRJ-3J-t0X"/>
-                            <constraint firstItem="WwK-4K-Nuk" firstAttribute="top" secondItem="iuf-9L-nbV" secondAttribute="bottom" constant="104" id="zfP-65-WvX"/>
+                            <constraint firstItem="WwK-4K-Nuk" firstAttribute="top" secondItem="iuf-9L-nbV" secondAttribute="bottom" constant="38" id="zfP-65-WvX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="quoteTextLable" destination="iuf-9L-nbV" id="wfa-Ga-eI5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

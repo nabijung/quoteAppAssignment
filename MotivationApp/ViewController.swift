@@ -17,9 +17,39 @@ class ViewController: UIViewController {
     
     var lifeQuotes = ["Do every act of your life as though it were the very last act of your life.", "Do not let your difficulties fill you with anxiety, after all it is only in the darkest nights that stars shine more brightly.", "I live in my own little world. But its ok, they know me here.", "She had been given a wonderful gift: life. Sometimes it was cruelly taken away too soon, but it's what you did with it that counted, not how long it lasted."]
     
+   //ACTIONS
+    @IBAction func inspirationButtonPressed(_ sender: Any) {
+        let inspirationRandom = arc4random_uniform(UInt32(inspirationQuotes.count))
+        
+        quoteTextLable.text = inspirationQuotes[Int(inspirationRandom)]
+        
+    }
+    
+    @IBAction func motivationButtonPressed(_ sender: Any) {
+        let motivationRandom = arc4random_uniform(UInt32(inspirationQuotes.count))
+        
+        quoteTextLable.text = motivationQuotes[Int(motivationRandom)]
+    }
+    
+    @IBAction func lifeButtonPressed(_ sender: Any) {
+        let lifeRandom = arc4random_uniform(UInt32(inspirationQuotes.count))
+        
+        quoteTextLable.text = lifeQuotes[Int(lifeRandom)]
+    }
+    
+    @IBAction func FriendshipButtonPressed(_ sender: Any) {
+        let friendshipRandom = arc4random_uniform(UInt32(inspirationQuotes.count))
+        
+        quoteTextLable.text = friendshipQuotes[Int(friendshipRandom)]
+    }
+    
+    //OUTLETS
+    @IBOutlet weak var quoteTextLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
 
